@@ -51,7 +51,7 @@ def test_file_upload_with_invalid_signature(
     file_data = {
         "file": file_content,
     }
-    with mock.patch("auto_validator.core.utils.decorators.verify_signature_and_route_subnet", side_effect=PermissionDenied("Invalid signature")):
+    with mock.patch("..utils.decorators.verify_signature_and_route_subnet", side_effect=PermissionDenied("Invalid signature")):
         response = api_client.post(V1_FILES_URL, file_data, format="multipart")
 
     # Check that the response status code is 403 Forbidden
