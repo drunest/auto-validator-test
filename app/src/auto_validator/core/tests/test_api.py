@@ -42,7 +42,6 @@ def test_file_upload_with_valid_signature(api_client, user, eq):
 
 
 @mock.patch("auto_validator.core.utils.decorators.verify_signature_and_route_subnet")
-@pytest.mark.django_db
 def test_file_upload_with_invalid_signature(
     mock_verify_signature_and_route_subnet,
     api_client,
