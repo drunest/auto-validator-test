@@ -3,7 +3,7 @@ from rest_framework.response import Response
 
 from auto_validator.core.models import UploadedFile
 from auto_validator.core.serializers import UploadedFileSerializer
-from auto_validator.core.utils.decorators import verify_signature_and_route_subnet
+from auto_validator.core.decorators import verify_signature_and_route_subnet
 
 
 class FilesViewSet(mixins.CreateModelMixin, mixins.ListModelMixin, viewsets.GenericViewSet):
