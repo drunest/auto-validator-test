@@ -4,12 +4,12 @@ from unittest.mock import Mock, patch
 import pytest
 from rest_framework.response import Response
 
-from auto_validator.core.utils.decorators import verify_signature_and_route_subnet
+from auto_validator.core.decorators import verify_signature_and_route_subnet
 
 
-@patch("auto_validator.core.utils.decorators.bt.Keypair")
-@patch("auto_validator.core.utils.decorators.get_subnets_by_hotkeys")
-@patch("auto_validator.core.utils.decorators.send_messages")
+@patch("auto_validator.core.decorators.bt.Keypair")
+@patch("auto_validator.core.decorators.get_subnets_by_hotkeys")
+@patch("auto_validator.core.decorators.send_messages")
 @pytest.mark.django_db
 def test_valid_signature(mock_send_messages, mock_get_subnets_by_hotkeys, mock_keypair):
     mock_get_subnets_by_hotkeys.return_value = ["subnet1"]
