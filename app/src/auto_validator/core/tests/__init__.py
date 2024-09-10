@@ -5,4 +5,3 @@ project/core/tests/conftest.py:8: in <module>
     from .models import User
 E   ImportError: attempted relative import with no known parent package
 """
-import test_api
